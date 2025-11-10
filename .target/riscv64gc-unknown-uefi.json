@@ -1,0 +1,61 @@
+{
+    "abi-return-struct-as-int": true,
+    "allows-weak-linkage": false,
+    "arch": "riscv64",
+    "archive-format": "coff",
+    "binary-format": "coff",
+    "code-model": "medium",
+    "cpu": "generic-rv64",
+    "crt-objects-fallback": "false",
+    "data-layout": "e-m:e-p:64:64-i64:64-i128:128-n32:64-S128",
+    "debuginfo-kind": "pdb",
+    "disable-redzone": true,
+    "dll-tls-export": false,
+    "eh-frame-header": false,
+    "emit-debug-gdb-scripts": false,
+    "entry-abi": "efiapi",
+    "entry-name": "efi_main",
+    "exe-suffix": ".efi",
+    "features": "+m,+a,+f,+d,+c,+zicsr,+zifencei",
+    "is-like-msvc": true,
+    "is-like-windows": true,
+    "linker": "rust-lld",
+    "linker-flavor": "msvc-lld",
+    "linker-is-gnu": false,
+    "lld-flavor": "link",
+    "llvm-abiname": "lp64d",
+    "llvm-target": "riscv64-unknown-windows",
+    "max-atomic-width": 64,
+    "metadata": {
+        "description": "UEFI RISC-V (RV64IMAFDC ISA)",
+        "host_tools": false,
+        "tier": 2
+    },
+    "os": "uefi",
+    "panic-strategy": "abort",
+    "plt-by-default": false,
+    "pre-link-args": {
+        "msvc": [
+            "/NOLOGO",
+            "/entry:efi_main",
+            "/subsystem:efi_application",
+            "/machine:riscv64"
+        ],
+        "msvc-lld": [
+            "/NOLOGO",
+            "/entry:efi_main",
+            "/subsystem:efi_application",
+            "/machine:riscv64"
+        ]
+    },
+    "relocation-model": "static",
+    "singlethread": true,
+    "split-debuginfo": "packed",
+    "stack-probes": {
+        "kind": "call"
+    },
+    "supported-split-debuginfo": [
+        "packed"
+    ],
+    "target-pointer-width": 64
+}

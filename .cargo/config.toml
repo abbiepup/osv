@@ -1,0 +1,6 @@
+[build]
+target = "riscv64gc-unknown-none-elf"
+
+[unstable]
+build-std = ["panic_abort", "alloc", "core", "compiler_builtins"]
+build-std-features = ["compiler-builtins-mem"]

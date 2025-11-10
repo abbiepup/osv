@@ -1,0 +1,10 @@
+[package]
+name = "osv"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+riscv = "0.15.0"
+riscv-peripheral = "0.4.0"
+uefi = "0.36.1"
+
